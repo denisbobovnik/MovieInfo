@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ShowtimeList 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="www.movieinfo.com"
+	xsi:schemaLocation="www.movieinfo.com Besednjak.xsd">
+	
+	<Showtime showtimeID="sh1" movieID="mv4">
+		<KolosejShowtimeID value="F8F02100023UCGWEWF" />
+		<Date>2018-10-30</Date>
+		<Time casovniPas="GMT">20:00:00</Time>
+		<City>Ljubljana</City>
+		<Center>Kolosej Ljubljana</Center>
+		<Theater>Dvorana 8</Theater>
+	</Showtime>
+	<Showtime showtimeID="sh2" movieID="mv4">
+		<KolosejShowtimeID value="F8F03100123UCG5EWF" />
+		<Date>2018-10-30</Date>
+		<Time>22:00:00</Time>
+		<City>Ljubljana</City>
+		<Center>Kolosej Ljubljana</Center>
+		<Theater>Dvorana 8</Theater>
+	</Showtime>
+	<Showtime showtimeID="sh3" movieID="mv5">
+		<KolosejShowtimeID value="C2E02100023UCGWEWF" />
+		<Date>2018-10-16</Date>
+		<Time>14:10:00</Time>
+		<City>Ljubljana</City>
+		<Center>Kolosej Ljubljana</Center>
+		<Theater>Dvorana Rio (10)</Theater>
+		<Vstopnica valuta="EUR" tipPredstave="3D">5.9</Vstopnica>
+	</Showtime>
+	<Showtime showtimeID="sh4" movieID="mv5">
+		<KolosejShowtimeID value="68E02100023UCGWEWF" />
+		<Date>2018-10-16</Date>
+		<Time>16:45:00</Time>
+		<City>Ljubljana</City>
+		<Center>Kolosej Ljubljana</Center>
+		<Theater>Dvorana Rio (10)</Theater>
+		<Vstopnica valuta="EUR" tipPredstave="2D">4.5</Vstopnica>
+	</Showtime>
+	<Showtime showtimeID="sh5" movieID="mv6">
+		<KolosejShowtimeID value="9A912100023UCGWEWF" />
+		<Date>2018-11-20</Date>
+		<Time>15:20:00</Time>
+		<City>Ljubljana</City>
+		<Center>Kolosej Ljubljana</Center>
+		<Theater>Dvorana Rio (10)</Theater>
+		<Vstopnica valuta="EUR" tipPredstave="2D">5.7</Vstopnica>
+	</Showtime>
+	<Showtime showtimeID="sh6" movieID="mv6">
+		<KolosejShowtimeID value="93912100023UCGWEWF" />
+		<Date>2018-11-20</Date>
+		<Time>18:00:00</Time>
+		<City>Ljubljana</City>
+		<Center>Kino Komuna</Center>
+		<Theater>Dvorana Komuna</Theater>
+	</Showtime>
+	<Showtime showtimeID="sh7" movieID="mv6">
+		<KolosejShowtimeID value="30A12100023UCGWEWF" />
+		<Date>2018-11-20</Date>
+		<Time>18:00:00</Time>
+		<City>Ljubljana</City>
+		<Center>Kolosej Ljubljana</Center>
+		<Theater>Dvorana Arena P&amp;P (7)</Theater>
+	</Showtime>
+	<Showtime showtimeID="sh8" movieID="mv6">
+		<KolosejShowtimeID value="91912100023UCGWEWF" />
+		<Date>2018-11-20</Date>
+		<Time>18:25:00</Time>
+		<City>Kranj</City>
+		<Center>Kolosej De Luxe Kranj</Center>
+		<Theater>Dvorana 1</Theater>
+	</Showtime>
+	<Showtime showtimeID="sh9" movieID="mv6">
+		<KolosejShowtimeID value="33A12100023UCGWEWF" />
+		<Date>2018-11-20</Date>
+		<Time>19:30:00</Time>
+		<City>Ljubljana</City>
+		<Center>Kolosej Ljubljana</Center>
+		<Theater>Dvorana 8</Theater>
+	</Showtime>
+	<Showtime showtimeID="sh10" movieID="mv7">
+		<KolosejShowtimeID value="D7B12100023UCGWEWF" />
+		<Date>2018-11-22</Date>
+		<Time>15:50:00</Time>
+		<City>Ljubljana</City>
+		<Center>Kolosej Ljubljana</Center>
+		<Theater>Dvorana Story (3)</Theater>
+	</Showtime>
+	<Showtime showtimeID="sh11" movieID="mv7">
+		<KolosejShowtimeID value="5CB12100023UCGWEWF" />
+		<Date>2018-11-22</Date>
+		<Time>17:45:00</Time>
+		<City>Ljubljana</City>
+		<Center>Kolosej Ljubljana</Center>
+		<Theater>Dvorana Story (3)</Theater>
+	</Showtime>
+	<Showtime showtimeID="sh12" movieID="mv7">
+		<KolosejShowtimeID value="A1B12100023UCGWEWF" />
+		<Date>2018-11-23</Date>
+		<Time>15:50:00</Time>
+		<City>Ljubljana</City>
+		<Center>Kolosej Ljubljana</Center>
+		<Theater>Dvorana Story (3)</Theater>
+	</Showtime>
+	<Showtime showtimeID="sh13" movieID="mv7">
+		<KolosejShowtimeID value="B1B12100023UCGWEWF" />
+		<Date>2018-11-23</Date>
+		<Time>17:45:00</Time>
+		<City>Ljubljana</City>
+		<Center>Kolosej Ljubljana</Center>
+		<Theater>Dvorana Story (3)</Theater>
+	</Showtime>
+	<Showtime showtimeID="sh14" movieID="mv7">
+		<KolosejShowtimeID value="E6C12100023UCGWEWF" />
+		<Date>2018-11-24</Date>
+		<Time>11:30:00</Time>
+		<City>Ljubljana</City>
+		<Center>Kolosej Ljubljana</Center>
+		<Theater>Dvorana Story (3)</Theater>
+	</Showtime>
+</ShowtimeList>

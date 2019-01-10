@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MovieInfo | O MovieInfo</title>
+<meta name="description" content="Free Bootstrap Theme by uicookies.com">
+<meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+<link rel="stylesheet" href="css/styles-merged.css">
+<link rel="stylesheet" href="css/style.min.css">
+<link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+
+	<!-- START: header -->
+
+	<div class="probootstrap-loader"></div>
+
+	<header role="banner" class="probootstrap-header">
+		<div class="container">
+			<a href="index.html" class="probootstrap-logo">MovieInfo<span>.</span></a>
+
+			<a href="#" class="probootstrap-burger-menu visible-xs"><i>Meni</i></a>
+			<div class="mobile-menu-overlay"></div>
+
+			<nav role="navigation" class="probootstrap-nav hidden-xs">
+				<ul class="probootstrap-main-nav">
+					<li>
+						<form style="display:inline; margin:0px; padding:0px;" id="filmi_form" action="/KIS_MovieInfo/FilmiServlet" method="get">
+							<a onclick="document.getElementById('filmi_form').submit(); return false;">Filmi</a>
+						</form>
+					</li>
+					<li><a href="seznamFilmovSAX.jsp">Filmi (SAX)</a></li>
+					<li>
+						<form style="display:inline; margin:0px; padding:0px;" id="predstave_form" action="/KIS_MovieInfo/PredstaveServlet" method="get">
+							<a onclick="document.getElementById('predstave_form').submit(); return false;">Predstave</a>
+						</form>
+					</li>
+					<li>
+						<form style="display:inline; margin:0px; padding:0px;" id="aktualno_form" action="/KIS_MovieInfo/AktualnoServlet" method="get">
+							<a onclick="document.getElementById('aktualno_form').submit(); return false;">Aktualno</a>
+						</form>
+					</li>
+					<li>
+						<form style="display:inline; margin:0px; padding:0px;" id="aktualno_dom_form" action="/KIS_MovieInfo/TransformacijaXML" method="get">
+							<a onclick="document.getElementById('aktualno_dom_form').submit(); return false;">Aktualno (DOM)</a>
+						</form>
+					</li>
+					<li>
+						<form style="display:inline; margin:0px; padding:0px;" id="pretvorbe_form" action="/KIS_MovieInfo/PretvorbeServlet" method="get">
+							<a onclick="document.getElementById('pretvorbe_form').submit(); return false;">Pretvorbe</a>
+						</form>
+					</li>
+				</ul>
+				<ul class="probootstrap-right-nav hidden-xs">
+					<li><a href="https://twitter.com/denisbobovnik"><i class="icon-twitter"></i></a></li>
+					<li><a href="https://www.facebook.com/bobovnikdenis"><i class="icon-facebook2"></i></a></li>
+					<li><a href="https://www.instagram.com/denis.bobovnik/"><i class="icon-instagram2"></i></a></li>
+				</ul>
+				<div class="extra-text visible-xs">
+					<a href="#" class="probootstrap-burger-menu"><i>Meni</i></a>
+					<h5>Naslov</h5>
+					<p>Koroška cesta 46, 2000 Maribor</p>
+					<h5>Poveži se</h5>
+					<ul class="social-buttons">
+						<li><a href="https://twitter.com/denisbobovnik"><i class="icon-twitter"></i></a></li>
+						<li><a href="https://www.facebook.com/bobovnikdenis"><i class="icon-facebook2"></i></a></li>
+						<li><a href="https://www.instagram.com/denis.bobovnik/"><i class="icon-instagram2"></i></a></li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</header>
+	<!-- END: header -->
+	
+	<section class="probootstrap-slider flexslider">
+		<ul class="slides">
+			<li style="background-image: url(img/slider_1.jpg);">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12 text-center">
+							<div class="slides-text probootstrap-animate">
+								<h2>Aktualni sporedi.</h2>
+								<p>
+									<a class="btn btn-primary" onclick="document.getElementById('predstave_form').submit(); return false;">Ogled</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li style="background-image: url(img/slider_2.jpg);">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12 text-center">
+							<div class="slides-text probootstrap-animate">
+								<h2>Informacije o filmih.</h2>
+								<p>
+									<a class="btn btn-primary" onclick="document.getElementById('filmi_form').submit(); return false;">Info</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</section>
+	<!-- END: slider  -->
+
+	<div class="probootstrap-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 probootstrap-animate" data-animate-effect="fadeInLeft">
+
+					<div class="panel-group probootstrap-panel" id="accordion" role="tablist" aria-multiselectable="true">
+						<div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="headingOne">
+								<h3 class="panel-title">
+									<a role="button" data-toggle="collapse"
+										data-parent="#accordion" href="#collapseOne"
+										aria-expanded="true" aria-controls="collapseOne"> Poslovna
+										ideja </a>
+								</h3>
+							</div>
+							<div id="collapseOne" class="panel-collapse collapse in"
+								role="tabpanel" aria-labelledby="headingOne">
+								<div class="panel-body">
+									<p>Pri MovieInfo je cilj našim strankam ponuditi nepozabno
+										izkušnjo ob gledanju filmov. Tako smo se odločili, da
+										ustvarimi spletno aplikacijo, ki jim bo nudila enovit vstop v
+										svet informacij o filmih, vse od napovednikov, pa do predstav
+										samih.</p>
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="headingTwo">
+								<h3 class="panel-title">
+									<a class="collapsed" role="button" data-toggle="collapse"
+										data-parent="#accordion" href="#collapseTwo"
+										aria-expanded="false" aria-controls="collapseTwo">
+										Profesionalno poslovanje</a>
+								</h3>
+							</div>
+							<div id="collapseTwo" class="panel-collapse collapse"
+								role="tabpanel" aria-labelledby="headingTwo">
+								<div class="panel-body">
+									<p>Izdelali smo statično XSL-FO predlogo računa za nalogo 7a, ki jo vrne servlet na povezavi spodaj.</p>
+									<form style="display:inline; margin:0px; padding:0px;" id="racun_form" action="/KIS_MovieInfo/RacunServlet" method="get">
+										<a class="btn btn-primary" onclick="document.getElementById('racun_form').submit(); return false;">Račun</a>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- END panel-group -->
+				</div>
+				<div class="col-md-6 probootstrap-animate" data-animate-effect="fadeInRight">
+					<figure>
+						<div class="probootstrap-video">
+							<a href="https://www.youtube.com/watch?v=Xg5tA3rHiKI" class="popup-vimeo probootstrap-video-play"><i class="icon-play3"></i></a> <img src="img/slider_2.jpg" alt="Free HTML5 Bootstrap Template by uicookies.com" class="img-responsive img-border">
+						</div>
+						<figcaption>Oglejte si naš predstavitveni video.</figcaption>
+					</figure>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- END section -->
+	
+	<footer class="probootstrap-footer probootstrap-bg">
+		<div class="container">
+			<div class="row copyright">
+				<div class="col-md-6">
+					<div class="probootstrap-footer-widget">
+						<p>
+							&copy; 2018 <a href="index.html">MovieInfo</a>.
+						</p>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="probootstrap-footer-widget right">
+						<ul class="probootstrap-social">
+							<li><a href="https://twitter.com/denisbobovnik"><i class="icon-twitter"></i></a></li>
+							<li><a href="https://www.facebook.com/bobovnikdenis"><i class="icon-facebook2"></i></a></li>
+							<li><a href="https://www.instagram.com/denis.bobovnik/"><i class="icon-instagram2"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-chevron-thin-up"></i></a>
+	</div>
+	<script src="js/scripts.min.js"></script>
+	<script src="js/main.min.js"></script>
+	<script src="js/custom.js"></script>
+
+
+</body>
+</html>

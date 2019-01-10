@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="TransformacijaXML.xsl"?>
+<MovieList
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="www.movieinfo.com"
+	xsi:schemaLocation="www.movieinfo.com Besednjak.xsd">
+	
+	<Movie movieID="mv1" kategorija="iskani">
+		<OriginalTitle>Van Helsing</OriginalTitle>
+		<Trailer>https://www.youtube.com/embed/mrOqCgDgXfQ</Trailer>
+		<Genre>Action, Adventure, Fantasy</Genre>
+		<Year>2004</Year>
+		<Duration enota="minut">131</Duration>
+		<Director>Stephen Sommers</Director>
+		<Writer>Stephen Sommers</Writer>
+		<Cast>Hugh Jackman, Kate Beckinsale, Richard Roxburgh, David Wenham
+		</Cast>
+		<Language jezik="angleški">English, Latin</Language>
+		<Country jezik="angleški">USA, Czech Republic</Country>
+		<PlotOutline>The notorious monster hunter is sent to Transylvania to
+			stop Count Dracula who is using Dr. Frankenstein's research and a
+			werewolf for some sinister purpose.</PlotOutline>
+		<Title>Van Helsing</Title>
+		<Poster>https://m.media-amazon.com/images/M/MV5BODRmY2NhNDItOWViNi00OTIyLTk3YjYtYzY0YTFlMDg1YzQ0L2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg
+		</Poster>
+		<Award>3 wins &amp; 20 nominations.</Award>
+		<IMDBID value="tt0338526" />
+		<SumOfScores>0</SumOfScores>
+		<NumOfScores>0</NumOfScores>
+		<NaVoljo>0</NaVoljo>
+		<Ratings>
+			<Rating>
+				<Source>IMDB</Source>
+				<Value>6.1/10</Value>
+			</Rating>
+			<Rating>
+				<Source>Metacritic</Source>
+				<Value>35/100</Value>
+			</Rating>
+			<Rating>
+				<Source>MovieInfo</Source>
+				<Value>0</Value>
+			</Rating>
+		</Ratings>
+	</Movie>
+	<Movie movieID="mv2" kategorija="popularni">
+		<OriginalTitle>Dumb and Dumber</OriginalTitle>
+		<Trailer>https://www.youtube.com/embed/l13yPhimE3o</Trailer>
+		<Genre>Comedy</Genre>
+		<Rated>PG-13</Rated>
+		<Year>1994</Year>
+		<Duration enota="minut">107</Duration>
+		<Director>Peter Farrelly, Bobby Farrelly</Director>
+		<Writer>Peter Farrelly, Bennett Yellin, Bobby Farrelly</Writer>
+		<Cast>Jim Carrey, Jeff Daniels, Lauren Holly, Mike Starr</Cast>
+		<Language jezik="angleški">English, Swedish, German</Language>
+		<Country jezik="angleški">USA</Country>
+		<PlotOutline>The cross-country adventures of 2 good-hearted but
+			incredibly stupid friends.</PlotOutline>
+		<Title jezik="slovenski">Butec in Butec</Title>
+		<Poster>https://m.media-amazon.com/images/M/MV5BZDQwMjNiMTQtY2UwYy00NjhiLTk0ZWEtZWM5ZWMzNGFjNTVkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg
+		</Poster>
+		<Award>5 wins &amp; 3 nominations.</Award>
+		<IMDBID value="tt0109686" />
+		<SumOfScores>0</SumOfScores>
+		<NumOfScores>0</NumOfScores>
+		<NaVoljo>0</NaVoljo>
+		<Ratings>
+			<Rating>
+				<Source>IMDB</Source>
+				<Value>7.3/10</Value>
+			</Rating>
+			<Rating>
+				<Source>Metacritic</Source>
+				<Value>41/100</Value>
+			</Rating>
+			<Rating>
+				<Source>Rotten Tomatoes</Source>
+				<Value>67%</Value>
+			</Rating>
+			<Rating>
+				<Source>MovieInfo</Source>
+				<Value>0</Value>
+			</Rating>
+		</Ratings>
+	</Movie>
+	<Movie movieID="mv3" kategorija="popularni">
+		<OriginalTitle>Source Code</OriginalTitle>
+		<Trailer>https://www.youtube.com/embed/NkTrG-gpIzE</Trailer>
+		<Genre>Mystery, Romance, Sci-Fi</Genre>
+		<Rated>PG-13</Rated>
+		<Year>2011</Year>
+		<Duration enota="minut">93</Duration>
+		<Director>Duncan Jones</Director>
+		<Writer>Ben Ripley</Writer>
+		<Cast>Jake Gyllenhaal, Michelle Monaghan, Vera Farmiga, Jeffrey Wright
+		</Cast>
+		<Language jezik="angleški">English</Language>
+		<Country jezik="angleški">USA, Canada</Country>
+		<PlotOutline>A soldier wakes up in someone else's body and discovers
+			he's part of an experimental government program to find the bomber of
+			a commuter train. A mission he has only 8 minutes to complete.
+		</PlotOutline>
+		<Title jezik="slovenski">Izvorna koda</Title>
+		<Poster>https://m.media-amazon.com/images/M/MV5BMTY0MTc3MzMzNV5BMl5BanBnXkFtZTcwNDE4MjE0NA@@._V1_SX300.jpg
+		</Poster>
+		<Award>1 win &amp; 8 nominations.</Award>
+		<IMDBID value="tt0945513" />
+		<SumOfScores>0</SumOfScores>
+		<NumOfScores>0</NumOfScores>
+		<NaVoljo>0</NaVoljo>
+		<Ratings>
+			<Rating>
+				<Source>IMDB</Source>
+				<Value>7.5/10</Value>
+			</Rating>
+			<Rating>
+				<Source>Metacritic</Source>
+				<Value>74/100</Value>
+			</Rating>
+			<Rating>
+				<Source>Rotten Tomatoes</Source>
+				<Value>92%</Value>
+			</Rating>
+			<Rating>
+				<Source>MovieInfo</Source>
+				<Value>0</Value>
+			</Rating>
+		</Ratings>
+	</Movie>
+	<Movie movieID="mv4" kategorija="popularni">
+		<OriginalTitle>The Nutcracker and the Four Realms</OriginalTitle>
+		<Trailer>https://www.youtube.com/embed/BXfxLIuNJvw</Trailer>
+		<Genre>domišljijska pustolovščina</Genre>
+		<Year>2018</Year>
+		<Duration enota="minut">99</Duration>
+		<Director>Lasse Hallström, Joe Johnston</Director>
+		<Writer>Simon Beaufoy, E.T.A. Hoffmann, Ashleigh Powell</Writer>
+		<Cast>Keira Knightley, Mackenzie Foy, Eugenio Derbez, Matthew
+			Macfadyen, Richard E. Grant, Miranda Hart, Sergei Polunin, Jayden
+			Fowora-Knight, Omid Djalili, Jack Whitehall, Meera Syal, Ellie
+			Bamber, Misty Copeland, Helen Mirren, Morgan Freeman</Cast>
+		<Distributor>Copyright ©. 2i Film</Distributor>
+		<Language jezik="slovenski">angleščina</Language>
+		<Country jezik="slovenski">ZDA</Country>
+		<PlotOutline>Ko se Clara znajde v čudnem in mističnem paralelnem Svetu
+			snežink, Svetu rož in Svetu sladic, mora premagati zlovešče Četrto
+			kraljestvo in njegovo tiransko vladarico, da bi vrnila mir v
+			nestabilen svet.</PlotOutline>
+		<KolosejMovieID value="AC410000012UCGWEWF" />
+		<Title jezik="slovenski">Hrestač in štiri kraljestva</Title>
+		<URL>http://www.kolosej.si/filmi/film/hrestac-in-stiri-kraljestva/
+		</URL>
+		<Poster>http://www.kolosej.si/media/movies/2018/09/13/nutcracker_poster.jpg
+		</Poster>
+		<IMDBID value="tt5523010" />
+		<Localization>Podnapisi</Localization>
+		<SumOfScores>0</SumOfScores>
+		<NumOfScores>0</NumOfScores>
+		<NaVoljo>1</NaVoljo>
+		<Ratings>
+			<Rating>
+				<Source>MovieInfo</Source>
+				<Value>0</Value>
+			</Rating>
+		</Ratings>
+	</Movie>
+	<Movie movieID="mv5" kategorija="popularni">
+		<OriginalTitle>Bad Times at the El Royale</OriginalTitle>
+		<Trailer>https://www.youtube.com/embed/y7wzBVARwaU</Trailer>
+		<Genre>kriminalni misteriozni triler</Genre>
+		<Year>2018</Year>
+		<Duration enota="minut">141</Duration>
+		<Director>Drew Goddard</Director>
+		<Writer>Drew Goddard</Writer>
+		<Cast>Chris Hemsworth, Jeff Bridges, Nick Offerman, Dakota Johnson,
+			Jon Hamm, Cailee Spaeny</Cast>
+		<Distributor>Copyright ©. Blitz Film &amp; Video Distribution
+		</Distributor>
+		<Language jezik="slovenski">angleščina</Language>
+		<Country jezik="slovenski">ZDA</Country>
+		<PlotOutline>Sedem neznancev, vsak s svojo zakopano skrivnostjo, se
+			sreča v El Royalu – zapuščenem motelu s temno preteklostjo na jezeru
+			Tahoe. V toki ene usodne noči bo vsak od njih imel zadnjo opcijo
+			odrešitve, preden gre vse v pekel.</PlotOutline>
+		<KolosejMovieID value="8D010000012UCGWEWF" />
+		<Title jezik="slovenski">Težave v motelu El Royale</Title>
+		<URL>http://www.kolosej.si/filmi/film/tezave-v-motelu-el-royale/</URL>
+		<Poster>http://www.kolosej.si/media/movies/2018/09/13/200x275_El-Royal.jpg
+		</Poster>
+		<IMDBID value="tt6628394" />
+		<Localization>Podnapisi</Localization>
+		<SumOfScores>0</SumOfScores>
+		<NumOfScores>0</NumOfScores>
+		<NaVoljo>1</NaVoljo>
+		<Ratings>
+			<Rating>
+				<Source>IMDB</Source>
+				<Value>7.5/10</Value>
+			</Rating>
+			<Rating>
+				<Source>MovieInfo</Source>
+				<Value>0</Value>
+			</Rating>
+		</Ratings>
+	</Movie>
+	<Movie movieID="mv6" kategorija="novi">
+		<OriginalTitle>Bohemian Rhapsody</OriginalTitle>
+		<Trailer>https://www.youtube.com/embed/mP0VHJYFOAU</Trailer>
+		<Genre>biografska glasbena drama</Genre>
+		<Rated>PG-13</Rated>
+		<Year>2018</Year>
+		<Duration enota="minut">134</Duration>
+		<Director>Bryan Singer</Director>
+		<Writer>Anthony McCarten, Peter Morgan</Writer>
+		<Cast>Joseph Mazzello, Rami Malek, Mike Myers, Aidan Gillen, Lucy Boynton</Cast>
+		<Distributor>Copyright ©. Blitz Film &amp; Video Distribution
+		</Distributor>
+		<Language jezik="slovenski">angleščina</Language>
+		<Country jezik="slovenski">ZDA, Velika Britanija</Country>
+		<PlotOutline>Bohemian Rhapsody je močan poklon Queenom, njihovi glasbi in izjemnemu pevcu Freddie Mercury, ki je kljuboval stereotipom in prestopal meje ter postal eden najljubših zvezdnikov na planetu. Film spremlja strm vzpon benda skozi legendarne pesmi in revolucionaren zvok, njihov grozeči konec, ko je Mercuryjev življenjski slog ušel z vajeti, ter njihovo zmagovalno ponovno združitev na večer Live Aida, ko je Mercury, soočen s smrtonosno boleznijo, povedel bend v enem najveličastnejših nastopov v zgodovini rok glasbe. Pri tem pa utemelji zapuščino benda, ki je bil vedno bolj kot družina in ki vse do današnjega dne še naprej navdihuje avtsajderje, sanjače ter ljubitelje glasbe.</PlotOutline>
+		<KolosejMovieID value="4D010000012UCGWEWF" />
+		<Title jezik="slovenski">Bohemian Rhapsody</Title>
+		<URL>http://www.kolosej.si/filmi/film/bohemian-rhapsody/</URL>
+		<Poster>http://www.kolosej.si/media/movies/2018/09/26/br_poster.jpg
+		</Poster>
+		<IMDBID value="tt1727824" />
+		<Localization>Podnapisi</Localization>
+		<SumOfScores>0</SumOfScores>
+		<NumOfScores>0</NumOfScores>
+		<NaVoljo>1</NaVoljo>
+		<Ratings>
+			<Rating>
+				<Source>IMDB</Source>
+				<Value>8.4/10</Value>
+			</Rating>
+			<Rating>
+				<Source>MovieInfo</Source>
+				<Value>0</Value>
+			</Rating>
+		</Ratings>
+	</Movie>
+	<Movie movieID="mv7" kategorija="novi">
+		<OriginalTitle>The Grinch</OriginalTitle>
+		<Trailer>https://www.youtube.com/embed/Bf6D-i8YpHg</Trailer>
+		<Genre>animirana družinska komedija</Genre>
+		<Year>2018</Year>
+		<Duration enota="minut">90</Duration>
+		<Director>Yarrow Cheney, Scott Mosier</Director>
+		<Writer>Michael LeSieur</Writer>
+		<Cast>Goran Hrvaćanin, Julija Golob, Jernej Kuntner</Cast>
+		<Distributor>Karantanija Cinemas</Distributor>
+		<Language jezik="slovenski">slovenščina</Language>
+		<Country jezik="slovenski">ZDA, Kitajska</Country>
+		<PlotOutline>Čudaški Grinch živi samotarsko življenje v jami blizu mesteca Kdolsko. Družbo mu dela zvesti prijatelj, psiček Maks. Svoje bivališče sta si uredila z izumi in izpopolnjenimi tehničnimi napravami, ki jima lajšajo vsak dan. Grinch se pretežno zadržuje doma, prebivalce Kdolskega vidi le takrat, ko mu zmanjka hrane in mora po nakupih. Vsako leto pa mu prebivalci Kdolskega, Kdoji, dneve pred božičem pokvarijo z vedno večjimi, svetlikajočimi in glasnimi praznovanji. In ker se letos Kdoji odločijo, da bo božič še trikrat večji kot običajno, Grinchu prekipi in se odloči, da bo ukradel božič. Da bo naposled le imel mir in tišino, se odloči, da se bo na predvečer božiča preoblekel v Božička.</PlotOutline>
+		<KolosejMovieID value="A0510000012UCGWEWF" />
+		<Title jezik="slovenski">Grinch 3D (sinhroniziran)</Title>
+		<URL>http://www.kolosej.si/filmi/film/grinch-3d-sinhroniziran/</URL>
+		<Poster>http://www.kolosej.si/media/movies/2018/11/08/grinch_poster_kZNWo8X.jpg</Poster>
+		<IMDBID value="tt2709692" />
+		<Localization>Sinhronizirano</Localization>
+		<SumOfScores>0</SumOfScores>
+		<NumOfScores>0</NumOfScores>
+		<NaVoljo>1</NaVoljo>
+		<Ratings>
+			<Rating>
+				<Source>IMDB</Source>
+				<Value>6.3/10</Value>
+			</Rating>
+			<Rating>
+				<Source>MovieInfo</Source>
+				<Value>0</Value>
+			</Rating>
+		</Ratings>
+	</Movie>
+</MovieList>

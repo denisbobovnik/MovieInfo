@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format" font-family="Times New Roman">
+	<fo:layout-master-set>
+		<fo:simple-page-master master-name="A4"
+			page-width="210mm" page-height="297mm" margin="10mm">
+			<fo:region-body space-before="80pt" space-after="80pt" />
+			<fo:region-before region-name="header" extent="3cm" />
+			<fo:region-after region-name="footer" extent="3cm" />
+		</fo:simple-page-master>
+	</fo:layout-master-set>
+	<fo:page-sequence master-reference="A4"
+		initial-page-number="1">
+		<fo:title>Račun</fo:title>
+		<fo:static-content flow-name="header">
+			<fo:block>
+				<fo:block-container position="absolute" top="2mm"
+					left="2mm" width="100%" height="23px">
+					<fo:block>
+						<fo:external-graphic
+							content-width="scale-to-fit" content-height="scale-to-fit"
+							src="https://i.ibb.co/PrgB0dx/logo.png" width="150px"
+							height="23px" />
+					</fo:block>
+					<fo:block>
+						<fo:leader leader-pattern="rule" leader-length="100%" rule-style="solid" rule-thickness="1pt" />
+					</fo:block>
+				</fo:block-container>
+			</fo:block>
+		</fo:static-content>
+		<fo:static-content flow-name="footer">
+			<fo:block>
+				<fo:leader leader-pattern="rule" leader-length="100%"
+					rule-style="solid" rule-thickness="1pt" />
+			</fo:block>
+			<fo:table table-layout="fixed" margin-bottom="20px"
+				width="100%">
+				<fo:table-column column-width="50%" />
+				<fo:table-column column-width="50%" />
+				<fo:table-body>
+					<fo:table-row>
+						<fo:table-cell padding="2mm">
+							<fo:block text-align="left">MovieInfo. d.o.o.</fo:block>
+							<fo:block text-align="left">Koroška cesta 46, 2000 Maribor
+							</fo:block>
+							<fo:block text-align="left">ID za DDV: SI37682885</fo:block>
+							<fo:block text-align="left">Tel.: 00 386 2 88 34 756</fo:block>
+							<fo:block text-align="left">
+								E-mail: 
+								<fo:basic-link
+									external-destination="url('movie@info.com')"
+									color="blue" text-decoration="underline">
+									movie@info.com
+								</fo:basic-link>
+							</fo:block>
+						</fo:table-cell>
+						<fo:table-cell padding="2mm">
+							<fo:block text-align="right">
+								<fo:basic-link
+									external-destination="url('http://localhost:8080/KIS_MovieInfo/index.html')"
+									color="blue" text-decoration="underline">
+									www.movieinfo.com
+								</fo:basic-link>
+							</fo:block>
+							<fo:block text-align="right">Račun je bil izdan pri MovieInfo.</fo:block>
+						</fo:table-cell>
+					</fo:table-row>
+				</fo:table-body>
+			</fo:table>
+		</fo:static-content>
+		<fo:flow flow-name="xsl-region-body">
+			<fo:block>
+				<fo:block-container width="190mm" font-size="2em"
+					border-color="#009F00" color="#009F00" border-after-style="solid"
+					border-width="0.5mm">
+					<fo:block>Račun za vstopnice predstave
+					</fo:block>
+				</fo:block-container>
+			</fo:block>
+			<fo:block>
+				<fo:block-container position="absolute"
+					width="40%" left="5mm" top="20mm" text-align="left">
+					<fo:block background-color="#FFF1A5" padding="2mm">Podatki o
+						računu: </fo:block>
+					<fo:block>Številka računa: 7256-43778-62009</fo:block>
+					<fo:block>Številka kupca: 10000-307120</fo:block>
+					<fo:block>Datum računa: 06.12.2018 10:03:44</fo:block>
+				</fo:block-container>
+				<fo:block-container position="absolute"
+					width="40%" left="105mm" top="20mm">
+					<fo:block background-color="#FFF1A5" padding="2mm">Prejemnik
+						računa: </fo:block>
+					<fo:block>Ime: Dino Tiranozaver</fo:block>
+					<fo:block>Naslov: Beklašićeva ulica 12a, 2000 Maribor</fo:block>
+					<fo:block>E-mail: dino.zaver@gmail.com</fo:block>
+					<fo:block>Tel.: 040 222 145</fo:block>
+				</fo:block-container>
+			</fo:block>
+			<fo:block>
+				<fo:block-container position="absolute"
+					width="190mm" left="0mm" top="70mm">
+					<fo:table table-layout="fixed" width="100%"
+						border-color="#888888" border-width="medium" border-style="solid">
+						<fo:table-column column-width="20mm" />
+						<fo:table-column column-width="70mm" />
+						<fo:table-column column-width="25mm" />
+						<fo:table-column column-width="20mm" />
+						<fo:table-column column-width="20mm" />
+						<fo:table-column column-width="20mm" />
+						<fo:table-column column-width="20mm" />
+						<fo:table-header background-color="#DFDFDF">
+							<fo:table-cell padding="2mm">
+								<fo:block>Številka vstopnice</fo:block>
+							</fo:table-cell>
+							<fo:table-cell padding="2mm">
+								<fo:block>Predstava</fo:block>
+							</fo:table-cell>
+							<fo:table-cell padding="2mm">
+								<fo:block>Šifra</fo:block>
+							</fo:table-cell>
+							<fo:table-cell padding="2mm">
+								<fo:block>Količina</fo:block>
+							</fo:table-cell>
+							<fo:table-cell text-align="right" padding="2mm">
+								<fo:block>Cena neto</fo:block>
+							</fo:table-cell>
+							<fo:table-cell text-align="right" padding="2mm">
+								<fo:block>Cena z DDV</fo:block>
+							</fo:table-cell>
+							<fo:table-cell text-align="right" padding="2mm">
+								<fo:block>Skupaj EUR</fo:block>
+							</fo:table-cell>
+						</fo:table-header>
+						<fo:table-body>
+							<fo:table-row>
+								<fo:table-cell text-align="center" padding="2mm">
+									<fo:block>1</fo:block>
+								</fo:table-cell>
+								<fo:table-cell padding="2mm">
+									<fo:block>Težave v motelu El Royale (2D)</fo:block>
+								</fo:table-cell>
+								<fo:table-cell padding="2mm">
+									<fo:block>XXX-28212</fo:block>
+								</fo:table-cell>
+								<fo:table-cell text-align="right" padding="2mm">
+									<fo:block>2x</fo:block>
+								</fo:table-cell>
+								<fo:table-cell text-align="right" padding="2mm">
+									<fo:block>4,08</fo:block>
+								</fo:table-cell>
+								<fo:table-cell text-align="right" padding="2mm">
+									<fo:block>4,50</fo:block>
+								</fo:table-cell>
+								<fo:table-cell text-align="right" padding="2mm">
+									<fo:block>9,00</fo:block>
+								</fo:table-cell>
+							</fo:table-row>
+							<fo:table-row>
+								<fo:table-cell text-align="center" padding="2mm">
+									<fo:block>2</fo:block>
+								</fo:table-cell>
+								<fo:table-cell padding="2mm">
+									<fo:block>Bohemian Rhapsody (2D)</fo:block>
+								</fo:table-cell>
+								<fo:table-cell padding="2mm">
+									<fo:block>XXX-27216</fo:block>
+								</fo:table-cell>
+								<fo:table-cell text-align="right" padding="2mm">
+									<fo:block>2x</fo:block>
+								</fo:table-cell>
+								<fo:table-cell text-align="right" padding="2mm">
+									<fo:block>4,80</fo:block>
+								</fo:table-cell>
+								<fo:table-cell text-align="right" padding="2mm">
+									<fo:block>5,70</fo:block>
+								</fo:table-cell>
+								<fo:table-cell text-align="right" padding="2mm">
+									<fo:block>11,40</fo:block>
+								</fo:table-cell>
+							</fo:table-row>
+							<fo:table-row>
+								<fo:table-cell text-align="center" padding="2mm">
+									<fo:block>3</fo:block>
+								</fo:table-cell>
+								<fo:table-cell padding="2mm">
+									<fo:block>Težave v motelu El Royale (3D)</fo:block>
+								</fo:table-cell>
+								<fo:table-cell padding="2mm">
+									<fo:block>XXX-22926</fo:block>
+								</fo:table-cell>
+								<fo:table-cell text-align="right" padding="2mm">
+									<fo:block>1x</fo:block>
+								</fo:table-cell>
+								<fo:table-cell text-align="right" padding="2mm">
+									<fo:block>5,04</fo:block>
+								</fo:table-cell>
+								<fo:table-cell text-align="right" padding="2mm">
+									<fo:block>5,90</fo:block>
+								</fo:table-cell>
+								<fo:table-cell text-align="right" padding="2mm">
+									<fo:block>5,90</fo:block>
+								</fo:table-cell>
+							</fo:table-row>
+						</fo:table-body>
+					</fo:table>
+				</fo:block-container>
+			</fo:block>
+			<fo:block-container position="absolute"
+				width="190mm" left="123mm" top="115mm">
+				<fo:table table-layout="fixed" margin-bottom="20px"
+					width="60%">
+					<fo:table-column column-width="50%" />
+					<fo:table-column column-width="50%" />
+					<fo:table-body>
+						<fo:table-row>
+							<fo:table-cell text-align="left" padding="2mm">
+								<fo:block font-weight="bold">Skupaj EUR:</fo:block>
+							</fo:table-cell>
+							<fo:table-cell text-align="left" padding="2mm">
+								<fo:block font-weight="bold">26,30</fo:block>
+							</fo:table-cell>
+						</fo:table-row>
+						<fo:table-row>
+							<fo:table-cell text-align="left" padding="2mm">
+								<fo:block>Znesek brez DDV EUR:</fo:block>
+							</fo:table-cell>
+							<fo:table-cell text-align="left" padding="2mm">
+								<fo:block>23,81</fo:block>
+							</fo:table-cell>
+						</fo:table-row>
+						<fo:table-row>
+							<fo:table-cell text-align="left" padding="2mm">
+								<fo:block>DDV EUR:</fo:block>
+							</fo:table-cell>
+							<fo:table-cell text-align="left" padding="2mm">
+								<fo:block>2,49</fo:block>
+							</fo:table-cell>
+						</fo:table-row>
+						<fo:table-row>
+							<fo:table-cell text-align="left" padding="2mm">
+								<fo:block>9,50% DDV:</fo:block>
+							</fo:table-cell>
+							<fo:table-cell text-align="left" padding="2mm">
+								<fo:block>2,49</fo:block>
+							</fo:table-cell>
+						</fo:table-row>
+					</fo:table-body>
+				</fo:table>
+			</fo:block-container>
+		</fo:flow>
+	</fo:page-sequence>
+</fo:root>

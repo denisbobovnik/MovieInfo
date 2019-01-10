@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="www.movieinfo.com"
+	xmlns="www.movieinfo.com"
+	elementFormDefault="qualified">
+	
+	<xs:include schemaLocation="EksternaShema.xsd"></xs:include>
+	
+	<xs:redefine schemaLocation="EksternaShema.xsd">
+		<xs:simpleType name="CityType">
+			<xs:restriction base="CityType">
+				<xs:enumeration value="Ljubljana" />
+				<xs:enumeration value="Kranj" />
+			</xs:restriction>
+		</xs:simpleType>
+		<xs:simpleType name="JezikType">
+			<xs:restriction base="JezikType">
+				<xs:enumeration value="angleški" />
+				<xs:enumeration value="slovenski" />
+			</xs:restriction>
+		</xs:simpleType>
+		<xs:simpleType name="TheaterType">
+			<xs:restriction base="TheaterType">
+				<xs:enumeration value="Dvorana Komuna" />
+				<xs:enumeration value="Dvorana 8" />
+				<xs:enumeration value="Dvorana 1" />
+				<xs:enumeration value="Dvorana Story (3)" />
+				<xs:enumeration value="Dvorana Rio (10)" />
+				<xs:enumeration value="Dvorana Arena P&amp;P (7)" />
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:redefine>
+	
+	<!-- Definicija korenov -->
+	<xs:element name="MovieList" type="MovieListType" />
+	<xs:element name="ShowtimeList" type="ShowtimeListType" />
+	
+	<!-- Seznam tipov -->
+	<xs:complexType name="TitleType">
+    	<xs:simpleContent>
+    		<xs:extension base="xs:string">
+        		<xs:attribute name="jezik" type="xs:string" use="optional" />
+    		</xs:extension>
+    	</xs:simpleContent>
+  	</xs:complexType>
+	<xs:complexType name="LanguageType">
+    	<xs:simpleContent>
+    		<xs:extension base="xs:string">
+        		<xs:attribute name="jezik" type="JezikType" use="optional" />
+    		</xs:extension>
+    	</xs:simpleContent>
+  	</xs:complexType>
+	<xs:complexType name="CountryType">
+    	<xs:simpleContent>
+    		<xs:extension base="xs:string">
+        		<xs:attribute name="jezik" type="JezikType" use="optional" />
+    		</xs:extension>
+    	</xs:simpleContent>
+  	</xs:complexType>
+	<xs:complexType name="DurationType">
+    	<xs:simpleContent>
+    		<xs:extension base="xs:positiveInteger">
+        		<xs:attribute name="enota" type="xs:string" fixed="minut" use="required"/>
+    		</xs:extension>
+    	</xs:simpleContent>
+  	</xs:complexType>
+	<xs:complexType name="MovieListType">
+		<xs:sequence>
+			<xs:element ref="Movie" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="RatingListType">
+		<xs:sequence>
+			<xs:element ref="Rating" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ShowtimeListType">
+		<xs:sequence>
+			<xs:element ref="Showtime" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="RatingsType">
+		<xs:sequence>
+			<xs:element ref="Rating" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ShowtimesType">
+		<xs:sequence>
+			<xs:element ref="Showtime" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="KolosejMovieIDType">
+		<xs:attribute name="value" type="xs:string" use="required "/>
+	</xs:complexType>
+	<xs:complexType name="IMDBIDType">
+		<xs:attribute name="value" type="xs:string" use="required "/>
+	</xs:complexType>
+	<xs:complexType name="KolosejShowtimeIDType">
+		<xs:attribute name="value" type="xs:string" use="required "/>
+	</xs:complexType>
+	<xs:complexType name="MovieType">
+		<xs:sequence>
+			<xs:element ref="OriginalTitle" />
+			<xs:element ref="Trailer" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element ref="Genre" />
+			<xs:element ref="Rated" minOccurs="0" />
+			<xs:element ref="Year" />
+			<xs:element ref="Duration" />
+			<xs:element ref="Director" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element ref="Producer" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element ref="Writer" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element ref="Cast" />
+			<xs:element ref="Distributor" minOccurs="0" />
+			<xs:element ref="Language" />
+			<xs:element ref="Country" />
+			<xs:element ref="PlotOutline" />
+		</xs:sequence>
+		<xs:attribute name="movieID" type="xs:ID" use="required" />
+	</xs:complexType>
+	<xs:complexType name="FullMovieType">
+		<xs:complexContent>
+			<xs:extension base="MovieType">
+				<xs:sequence>
+					<xs:element ref="KolosejMovieID" minOccurs="0" />
+					<xs:element ref="Title" minOccurs="0" />
+					<xs:element ref="Punchline" minOccurs="0" />
+					<xs:element ref="URL" minOccurs="0" />
+					<xs:element ref="Poster" minOccurs="0" />
+					<xs:element ref="Award" minOccurs="0" />
+					<xs:element ref="IMDBID" minOccurs="0" />
+					<xs:element ref="Localization" minOccurs="0" />
+					<xs:element ref="SumOfScores" />
+					<xs:element ref="NumOfScores" />
+					<xs:element ref="NaVoljo" />
+					<xs:element ref="Ratings" minOccurs="0" />
+					<xs:element ref="Showtimes" minOccurs="0" />
+				</xs:sequence>
+				<xs:anyAttribute processContents="skip" />
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ShowtimeType">
+		<xs:sequence>
+			<xs:element ref="KolosejShowtimeID" minOccurs="0" />
+			<xs:element ref="Date" />
+			<xs:element ref="Time" />
+			<xs:element ref="City" />
+			<xs:element ref="Center" />
+			<xs:element ref="Theater" />
+			<xs:any minOccurs="0" />
+		</xs:sequence>
+		<xs:attribute name="showtimeID" type="xs:ID" use="required" />
+		<xs:attribute name="movieID" type="xs:string" use="required" />
+	</xs:complexType>
+	<xs:complexType name="VstopnicaType">
+		<xs:simpleContent>
+			<xs:extension base="xs:double">
+				<xs:attribute name="valuta" type="ValutaType" use="required" />
+				<xs:attribute name="tipPredstave" type="tipPredstaveType" use="required" />
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="TimeType">
+		<xs:simpleContent>
+			<xs:extension base="xs:time">
+				<xs:anyAttribute processContents="skip" />
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	
+	<!-- Seznam elementov -->
+	<xs:element name="Showtimes" type="ShowtimesType" />
+	<xs:element name="Ratings" type="RatingsType" />
+	<xs:element name="Vstopnica" type="VstopnicaType" />
+	<xs:element name="Rating">
+		<xs:complexType>
+			<xs:all>
+				<xs:element ref="Source" />
+				<xs:element ref="Value" />
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Source" type="xs:string" />
+	<xs:element name="Value" default="0" type="ValueType" />
+	<xs:element name="KolosejMovieID" type="KolosejMovieIDType" />
+	<xs:element name="KolosejShowtimeID" type="KolosejShowtimeIDType" />
+	<xs:element name="Movie" type="FullMovieType" />
+	<xs:element name="Title" default="Unnamed" type="TitleType" />
+	<xs:element name="OriginalTitle" default="Neimenovan film" type="xs:string" />
+	<xs:element name="Punchline" default="No punchline" type="xs:string" />
+	<xs:element name="Trailer" type="TrailerType" />
+	<xs:element name="Genre" default="movie" type="xs:string" />
+	<xs:element name="Rated" type="RatedType" />
+	<xs:element name="Year" type="xs:gYear" />
+	<xs:element name="Duration" default="100" type="DurationType" />
+	<xs:element name="URL" type="URLType" />
+	<xs:element name="Poster" type="PosterType" />
+	<xs:element name="Director" type="xs:string" />
+	<xs:element name="Producer" type="xs:string" />
+	<xs:element name="Writer" type="xs:string" />
+	<xs:element name="Cast" type="xs:string" />
+	<xs:element name="Distributor" type="xs:string" />
+	<xs:element name="Language" default="angleščina" type="LanguageType" />
+	<xs:element name="Country" default="ZDA" type="CountryType" />
+	<xs:element name="Award" type="xs:string" />
+	<xs:element name="Localization" default="Ni podnapisov" type="xs:string" />
+	<xs:element name="PlotOutline" type="xs:string" />
+	<xs:element name="SumOfScores" default="0" type="GlasoviType" />
+	<xs:element name="NumOfScores" default="0" type="GlasoviType" />
+	<xs:element name="NaVoljo" default="0" type="xs:boolean" />
+	<xs:element name="Showtime" type="ShowtimeType" />
+	<xs:element name="Date" type="xs:date" />
+	<xs:element name="Time" type="TimeType" />
+	<xs:element name="City" default="Ljubljana" type="CityType" />
+	<xs:element name="Center" default="Kolosej Ljubljana" type="CenterType" />
+	<xs:element name="Theater" default="Dvorana 8" type="TheaterType" />
+	<xs:element name="IMDBID" type="IMDBIDType" />
+	
+	<!-- Seznam atributov -->
+	<xs:attribute name="casovniPas">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:pattern value="GMT|UCT|DST" />
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:attribute>
+	<xs:attribute name="kategorija">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:pattern value="popularni|iztekajoči|prihaja|iskani|novi" />
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:attribute>	
+</xs:schema>

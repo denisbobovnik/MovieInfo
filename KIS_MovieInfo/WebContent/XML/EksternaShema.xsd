@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns="www.movieinfo.com"
+	targetNamespace="www.movieinfo.com"
+	elementFormDefault="qualified">
+	
+	<xs:simpleType name="TrailerType">
+		<xs:restriction base="xs:anyURI">
+			<xs:pattern value="https://www.youtube.com/embed/[a-zA-Z0-9\-]{11}" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="URLType">
+		<xs:restriction base="xs:anyURI">
+			<xs:pattern value="http://www.kolosej.si/filmi/film/[a-zA-Z0-9\-]*/" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ValueType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="([0-9]*|[0-9]*\/[0-9]*|[0-9]*.[0-9]*\/10|[0-9]*%)" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="PosterType">
+		<xs:restriction base="xs:anyURI">
+			<xs:pattern value="(https://m.media-amazon.com/images/M/[a-zA-Z0-9@._]*.jpg|http://www.kolosej.si/media/movies/[0-9]{4}/[0-9]{2}/[0-9]{2}/[a-zA-Z0-9x_-]*.jpg)" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="RatedType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="([A-Z]{1}|[A-Z]{2}|[A-Z]{1}-[0-9]{2}|[A-Z]{2}-[0-9]{2})" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="GlasoviType">
+		<xs:restriction base="xs:nonNegativeInteger">
+			<xs:minInclusive value="0" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="CityType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Ljubljana" />
+			<xs:enumeration value="Kranj" />
+			<xs:enumeration value="Maribor" />
+			<xs:enumeration value="Nova Gorica" />
+			<xs:enumeration value="Novo Mesto" />
+			<xs:enumeration value="Murska Sobota" />
+			<xs:enumeration value="Ptuj" />
+			<xs:enumeration value="Domžale" />
+			<xs:enumeration value="Litija pri Čatežu" />
+			<xs:enumeration value="Rogla" />
+			<xs:enumeration value="Slovenj Gradec" />
+			<xs:enumeration value="Ravne na Koroškem" />
+			<xs:enumeration value="Radlje ob Dravi" />
+			<xs:enumeration value="Vuzenica" />
+			<xs:enumeration value="Muta" />
+			<xs:enumeration value="Izola" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="JezikType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="angleški" />
+			<xs:enumeration value="slovenski" />
+			<xs:enumeration value="nemški" />
+			<xs:enumeration value="portugalski" />
+			<xs:enumeration value="španski" />
+			<xs:enumeration value="francoski" />
+			<xs:enumeration value="arabski" />
+			<xs:enumeration value="kitajski" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="CenterType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Kolosej Ljubljana" />
+			<xs:enumeration value="Kolosej Kranj" />
+			<xs:enumeration value="Kino Komuna" />
+			<xs:enumeration value="Kolosej De Luxe Kranj" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TheaterType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Dvorana 1" />
+			<xs:enumeration value="Dvorana 2" />
+			<xs:enumeration value="Dvorana 3" />
+			<xs:enumeration value="Dvorana 4" />
+			<xs:enumeration value="Dvorana 6" />
+			<xs:enumeration value="Dvorana 8" />
+			<xs:enumeration value="Dvorana 9" />
+			<xs:enumeration value="Dvorana 11" />
+			<xs:enumeration value="Dvorana 12" />
+			<xs:enumeration value="Dvorana Story (3)" />
+			<xs:enumeration value="Dvorana Rio (10)" />
+			<xs:enumeration value="Dvorana Komuna" />
+			<xs:enumeration value="Dvorana RA Antena (5)" />
+			<xs:enumeration value="Dvorana Arena P&amp;P (7)" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ValutaType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="EUR" />
+			<xs:enumeration value="USD" />
+			<xs:enumeration value="TOL" />
+			<xs:enumeration value="SWF" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tipPredstaveType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="2D" />
+			<xs:enumeration value="3D" />
+			<xs:enumeration value="4D" />
+		</xs:restriction>
+	</xs:simpleType>
+		
+</xs:schema>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT MovieList (Movie*)>
+<!ELEMENT Movie (KolosejMovieID, Title, OriginalTitle, Punchline, Trailer, Genre, Rated, Year, Duration, URL, Ratings, Poster, Director, Producer, Writer, Cast, Distributor, Language, Country, Award, IMDBID, Localization, PlotOutline, NumOfScores, SumOfScores, NaVoljo)>
+
+<!ATTLIST Movie movieID ID #REQUIRED>
+
+<!ELEMENT KolosejMovieID EMPTY>
+<!ATTLIST KolosejMovieID value CDATA #IMPLIED>
+
+<!ENTITY % p "(#PCDATA)">
+
+<!ELEMENT Title %p;>
+<!ELEMENT OriginalTitle %p;>
+<!ELEMENT Punchline %p;>
+<!ELEMENT Trailer %p;>
+<!ELEMENT Genre %p;>
+<!ELEMENT Rated %p;>
+<!ELEMENT Year %p;>
+<!ELEMENT Duration %p;>
+<!ELEMENT URL %p;>
+<!ELEMENT Poster %p;>
+<!ELEMENT Director %p;>
+<!ELEMENT Producer %p;>
+<!ELEMENT Writer %p;>
+<!ELEMENT Cast %p;>
+<!ELEMENT Distributor %p;>
+<!ELEMENT Language %p;>
+<!ELEMENT Country %p;>
+<!ELEMENT Award ANY>
+
+<!ELEMENT IMDBID %p;>
+<!ATTLIST IMDBID value CDATA #IMPLIED>
+
+<!ELEMENT Localization %p;>
+<!ELEMENT PlotOutline %p;>
+<!ELEMENT NumOfScores %p;>
+<!ELEMENT SumOfScores %p;>
+<!ELEMENT NaVoljo %p;>
+
+<!ELEMENT Ratings (Rating+)>
+<!ELEMENT Rating (Source, Value)>
+
+<!ELEMENT Source %p;>
+<!ELEMENT Value %p;>
+
+<!ELEMENT ShowtimeList (Showtime*)>
+<!ELEMENT Showtime (KolosejShowtimeID, Date, Time, City, Center, Theater)>
+
+<!ATTLIST Showtime showtimeID ID #REQUIRED>
+<!ATTLIST Showtime movieID IDREF #IMPLIED>
+
+<!ENTITY cr "Copyright ©.">
+<!ENTITY pg "PG-13">
+
+<!ELEMENT KolosejShowtimeID %p;>
+<!ATTLIST KolosejShowtimeID value CDATA #IMPLIED>
+
+<!ELEMENT Date %p;>
+<!ELEMENT Time %p;>
+<!ELEMENT City %p;>
+<!ELEMENT Center %p;>
+<!ELEMENT Theater ANY>

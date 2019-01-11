@@ -1,13 +1,14 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@page import="si.um.feri.kis.sax.*"%>
+<%@page import="si.um.feri.kis.stax.*"%>
 <%@page import="java.util.*"%>
+<%@page import="java.text.*"%>
 <!DOCTYPE html>
 
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MovieInfo | Seznam filmov (SAX)</title>
+<title>MovieInfo | Prihajajoče predstave (StAX)</title>
 <meta name="description" content="Free Bootstrap Theme by uicookies.com">
 <meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
@@ -35,13 +36,13 @@
 							<a onclick="document.getElementById('filmi_form').submit(); return false;">Filmi</a>
 						</form>
 					</li>
-					<li class="active"><a href="seznamFilmovSAX.jsp">Filmi (SAX)</a></li>
+					<li><a href="seznamFilmovSAX.jsp">Filmi (SAX)</a></li>
 					<li>
 						<form style="display:inline; margin:0px; padding:0px;" id="predstave_form" action="/KIS_MovieInfo/PredstaveServlet" method="get">
 							<a onclick="document.getElementById('predstave_form').submit(); return false;">Predstave</a>
 						</form>
 					</li>
-					<li><a href="seznamPredstavStAX.jsp">Predstave (StAX)</a></li>
+					<li class="active"><a href="seznamPredstavStAX.jsp">Predstave (StAX)</a></li>
 					<li>
 						<form style="display:inline; margin:0px; padding:0px;" id="aktualno_form" action="/KIS_MovieInfo/AktualnoServlet" method="get">
 							<a onclick="document.getElementById('aktualno_form').submit(); return false;">Aktualno</a>
@@ -83,65 +84,51 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 section-heading probootstrap-animate">
-					<h2>Seznam filmov (SAX)</h2>
+					<h2>Prihajajoče predstave (StAX)</h2>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-12 section-heading probootstrap-animate">
-					<% RazpoznavalnikSAX prebraniPodatki = new RazpoznavalnikSAX("http://localhost:8080/KIS_MovieInfo/XML/MovieList.xml"); %>
-					<% if(prebraniPodatki.getMovieList().size()>0) { %>
+					<% SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss"); %>
+					<% RazpoznavalnikStAX prebraniPodatki = new RazpoznavalnikStAX("http://localhost:8080/KIS_MovieInfo/XML/ShowtimeList.xml"); %>
+					<% List<Showtime> predstaveKiPridejoVPostev = new ArrayList<Showtime>(); %>
+					<% 
+						for(Showtime showtime: prebraniPodatki.getShowtimeList()) {
+							if(showtime.getDate().before(new Date()))
+								continue;
+							predstaveKiPridejoVPostev.add(showtime);
+						}
+					%>
+					<% if(predstaveKiPridejoVPostev.size()>0) { %>
 						<table class="table table-bordered">
 							<tr>
 								<th style="color: white">ID</th>
-								<th style="color: white">KATEGORIJA</th>
-								<th style="color: white">NASLOV</th>
-								<th style="color: white">LETO</th>
-								<th style="color: white">ŽANR</th>
-								<th style="color: white">JEZIK</th>
-								<th style="color: white">IMDB</th>
-								<th style="color: white">OCENA</th>
+								<th style="color: white">ID_FILM</th>
+								<th style="color: white">CENTER</th>
+								<th style="color: white">DVORANA</th>
+								<th style="color: white">DATUM/ČAS</th>
+								<th style="color: white">TIP</th>
+								<th style="color: white">CENA</th>
 							</tr>
-							<% for(Movie movie : prebraniPodatki.getMovieList()) { %>
+							<% for(Showtime showtime : predstaveKiPridejoVPostev) { %>
 								<tr>
-									<td style="color: white"><%=movie.getMovieID() %></td>
-									<% if(movie.getKategorija() == null) { %>
-										<td style="color: white">nekategoriziran</td>
+									<td style="color: white"><%=showtime.getShowtimeID() %></td>
+									<td style="color: white"><%=showtime.getMovieID() %></td>
+									<td style="color: white"><%=showtime.getCenter() %></td>
+									<td style="color: white"><%=showtime.getTheater() %></td>
+									<td style="color: white"><%=sdf.format(showtime.getDate()) %></td>
+									<% if(showtime.getVstopnica() == null) { %>
+										<td style="color: white">nedefiniran</td>
+										<td style="color: white">nedoločena</td>
 									<% } else { %>
-										<td style="color: white"><%=movie.getKategorija() %></td>
+										<td style="color: white"><%=showtime.getVstopnica().getTipPredstave() %></td>
+										<td style="color: white"><%=showtime.getVstopnica().getCena() + " " + showtime.getVstopnica().getValuta() %></td>
 									<% } %>
-									<td style="color: white"><%=movie.getOriginalTitle() %></td>
-									<td style="color: white"><%=movie.getYear() %></td>
-									<td style="color: white"><%=movie.getGenre() %></td>
-									<td style="color: white"><%=movie.getLanguage() %></td>
-									<% if(movie.getImdb() == null) { %>
-										<td style="color: white">neuvrščen</td>
-									<% } else { %>
-										<td>
-											<a target="_blank" role="button" class="btn btn-primary btn-sm" href="https://www.imdb.com/title/<%=movie.getImdb()%>">Link</a>
-										</td>
-									<% } %>
-									<% 
-										List<Rating> seznamOcen = movie.getRatings();
-										boolean vsebuje = false; 
-										String ocena = "";
-										if(seznamOcen != null) {
-											for(Rating rating : seznamOcen) {
-												if(rating.getSource().equals("MovieInfo")) {
-													vsebuje = true;
-													ocena = rating.getValue();
-												}
-											}
-										}
-										if(vsebuje) { %>
-											<td style="color: white"><%=ocena %></td>
-										<% } else { %>
-											<td style="color: white">neocenjen</td>
-										<% } %>
 								</tr>
 							<% } %>
 						</table>
 					<% } else { %>
-						<h3>Na žalost ni nobenih filmov.</h3>
+						<h3>Na žalost ni nobenih predstav.</h3>
 					<% } %>
 				</div>
 			</div>

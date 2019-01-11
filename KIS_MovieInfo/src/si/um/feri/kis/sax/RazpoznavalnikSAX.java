@@ -15,11 +15,11 @@ public class RazpoznavalnikSAX extends DefaultHandler{
 	private Rating rating;
 	private String imdb;
 	
-	public RazpoznavalnikSAX() {
+	public RazpoznavalnikSAX(String URLMovieListXML) {
 		try {
 			SAXParserFactory saxFactory = SAXParserFactory.newInstance();
 			SAXParser parser = saxFactory.newSAXParser();
-			parser.parse("http://localhost:8080/KIS_MovieInfo/XML/MovieList.xml", this);
+			parser.parse(URLMovieListXML, this);
 		} catch (Exception e) {
 			System.out.println("Napaka: " + e.getMessage());
 			e.printStackTrace();

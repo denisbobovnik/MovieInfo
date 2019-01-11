@@ -42,6 +42,7 @@
 										<a onclick="document.getElementById('predstave_form').submit(); return false;">Predstave</a>
 									</form>
 								</li>
+								<li><a href="seznamPredstavStAX.jsp">Predstave (StAX)</a></li>
 								<li>
 									<form style="display:inline; margin:0px; padding:0px;" id="aktualno_form" action="/KIS_MovieInfo/AktualnoServlet" method="get">
 										<a onclick="document.getElementById('aktualno_form').submit(); return false;">Aktualno</a>
@@ -192,7 +193,7 @@
 							<div class="col-md-6">
 								<div class="probootstrap-footer-widget">
 									<p>
-										<xsl:text disable-output-escaping="yes"><![CDATA[&copy;]]></xsl:text> 2018 <a href="index.html">MovieInfo</a>.
+										<xsl:text disable-output-escaping="yes"><![CDATA[&copy;]]></xsl:text> 2019 <a href="index.html">MovieInfo</a>.
 									</p>
 								</div>
 							</div>

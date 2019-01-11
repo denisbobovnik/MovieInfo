@@ -103,22 +103,32 @@
 							<% for(Movie movie : prebraniPodatki.getMovieList()) { %>
 								<tr>
 									<td style="color: white"><%=movie.getMovieID() %></td>
-									<td style="color: white"><%=movie.getKategorija() %></td>
+									<% if(movie.getKategorija() == null) { %>
+										<td style="color: white">nekategoriziran</td>
+									<% } else { %>
+										<td style="color: white"><%=movie.getKategorija() %></td>
+									<% } %>
 									<td style="color: white"><%=movie.getOriginalTitle() %></td>
 									<td style="color: white"><%=movie.getYear() %></td>
 									<td style="color: white"><%=movie.getGenre() %></td>
 									<td style="color: white"><%=movie.getLanguage() %></td>
-									<td style="color: white">
-										<a target="_blank" role="button" class="btn btn-primary btn-sm" href="https://www.imdb.com/title/<%=movie.getImdb()%>">Link</a>
-									</td>
+									<% if(movie.getImdb() == null) { %>
+										<td style="color: white">neuvrščen</td>
+									<% } else { %>
+										<td>
+											<a target="_blank" role="button" class="btn btn-primary btn-sm" href="https://www.imdb.com/title/<%=movie.getImdb()%>">Link</a>
+										</td>
+									<% } %>
 									<% 
 										List<Rating> seznamOcen = movie.getRatings();
 										boolean vsebuje = false; 
 										String ocena = "";
-										for(Rating rating : seznamOcen) {
-											if(rating.getSource().equals("MovieInfo")) {
-												vsebuje = true;
-												ocena = rating.getValue();
+										if(seznamOcen != null) {
+											for(Rating rating : seznamOcen) {
+												if(rating.getSource().equals("MovieInfo")) {
+													vsebuje = true;
+													ocena = rating.getValue();
+												}
 											}
 										}
 										if(vsebuje) { %>

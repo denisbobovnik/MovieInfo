@@ -149,6 +149,65 @@
 								</figure>
 							</div>
 						</div>
+						<br /><br />
+						<div class="row">
+							<div class="col-md-8 probootstrap-animate" data-animate-effect="fadeInLeft">
+			
+								<div class="panel-group probootstrap-panel" id="accordionOne" role="tablist" aria-multiselectable="true">
+									<div class="panel panel-default">
+										<div class="panel-heading" role="tab" id="headingOneOne">
+											<h3 class="panel-title">
+												<a role="button" data-toggle="collapse"
+													data-parent="#accordionOne" href="#collapseOneOne"
+													aria-expanded="true" aria-controls="collapseOneOne"> Deserializacija/Serializacija z JAXB </a>
+											</h3>
+										</div>
+										<div id="collapseOneOne" class="panel-collapse collapse in"
+											role="tabpanel" aria-labelledby="headingOneOne">
+											<div class="panel-body">
+												<p>Izberite enega od možnosti. S pomočjo JAXB se bodo prebrali podatki in vrnjen boste dobili pregled predstav za izbran objekt.</p>
+												<xsl:choose>
+													<xsl:when test="document('ShowtimeList.xml')/zzz:ShowtimeList/zzz:Showtime[current-date() &lt;= zzz:Date]/zzz:Center[not(preceding::zzz:Center/. = .)]">
+														<form style="display:inline; margin-left:10px;" id="jaxb" action="/KIS_MovieInfo/SerServlet" method="post">
+															<div class="dropdown">
+																<button class="btn btn-primary dropdown-toggle" type="button"
+																	data-toggle="dropdown">
+																	Izberi objekt
+																	<span class="caret"></span>
+																</button>
+																<ul class="dropdown-menu">
+																	<xsl:for-each select="document('ShowtimeList.xml')/zzz:ShowtimeList/zzz:Showtime[current-date() &lt;= zzz:Date]/zzz:Center[not(preceding::zzz:Center/. = .)]">
+																		<li>
+																			<a>
+																				<xsl:attribute name="onclick">document.getElementById('center').value = "<xsl:value-of select="./text()"/>"; document.getElementById('jaxb').submit(); return false;</xsl:attribute>
+																				<xsl:value-of select="."/>
+																			</a>
+																		</li>
+																	</xsl:for-each>
+																</ul>
+															</div>
+															<input type="hidden" name="center" id="center" />
+														</form>
+													</xsl:when>
+													<xsl:otherwise>
+														<p>Na žalost ni nobenih predstav.</p>
+													</xsl:otherwise>
+												</xsl:choose>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- END panel-group -->
+							</div>
+							<div class="col-md-4 probootstrap-animate" data-animate-effect="fadeInRight">
+								<figure>
+									<div class="probootstrap-video">
+										<img src="img/jaxb.jpg" alt="Free HTML5 Bootstrap Template by uicookies.com" class="img-responsive img-border" />
+									</div>
+									<figcaption>Slika pretvorbe.</figcaption>
+								</figure>
+							</div>
+						</div>
 					</div>
 				</div>
 				<!-- END section -->
